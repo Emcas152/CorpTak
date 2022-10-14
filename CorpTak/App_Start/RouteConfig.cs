@@ -16,7 +16,7 @@ namespace CorpTak
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Colaborador", action = "Colaborador", id = UrlParameter.Optional }
             );
         }
     }

@@ -1,0 +1,22 @@
+﻿@model CorpTak.Models.VievModel.ColaboradorViewModel
+@{
+    ViewBag.Title = "JSON";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Editar", "Colaborador", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.HiddenFor(d => d.Id)
+            @Html.LabelFor(d => d.JSON)
+            @Html.TextAreaFor(d => d.JSON)
+
+            <div style="text-align:right">
+                <a href="~/Colaborador/Colaborador">Regresar</a>
+            </div>
+        </div>
+    </div>
+
+}

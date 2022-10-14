@@ -1,0 +1,45 @@
+﻿@model List<CorpTak.Models.VievModel.listColaboradorViewModel>
+@{
+    ViewBag.Title = "Colaborador";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row" style="text-align:right;padding:5px;">
+    <a href="~/Colaborador/Nuevo" class="btn btn-primary">Nuevo</a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Estado Civil</th>
+                <th>Grado Academico</th>
+                <th>Direccion</th>
+                <th>Acciones</th>
+            </tr>
+            @foreach (var Colaborador in Model)
+            {
+        <tr>
+            <td>@Colaborador.Id</td>
+            <td>@Colaborador.Nombres</td>
+            <td>@Colaborador.Apellidos</td>
+            <td>@Colaborador.FechaNacimiento</td>
+            <td>@Colaborador.EstadoCivil</td>
+            <td>@Colaborador.GradoAcademico</td>
+            <td>@Colaborador.Direccion</td>
+            <td>
+                <a href="~/Colaborador/Editar/@Colaborador.Id" class="btn btn-info">Editar</a>
+                <a href="~/Colaborador/Eliminar/@Colaborador.Id" class="btn btn-info">Eliminar</a>
+                <a href="~/Colaborador/GETJSON/@Colaborador.Id" class="btn btn-info">JSON</a>
+            </td>  
+        </tr>
+            }
+        </table>
+    </div>
+
+</div>
+
